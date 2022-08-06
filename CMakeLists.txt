@@ -160,6 +160,9 @@ install(EXPORT tsm-targets
 )
 
 #Create a ConfigVersion.cmake file
+set(INCLUDE_INSTALL_DIR include CACHE STRING "Include Install Dir")
+set(LIBRARY_INSTALL_DIR lib CACHE STRING "Lib Install Dir")
+
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
     ${CMAKE_CURRENT_BINARY_DIR}/libtsm-config-version.cmake
@@ -170,7 +173,7 @@ configure_package_config_file(
     ${CMAKE_CURRENT_SOURCE_DIR}/etc/libtsm-config.cmake.in
     ${CMAKE_CURRENT_BINARY_DIR}/libtsm-config.cmake
     PATH_VARS
-        INSTALL_CMAKEDIR
+        INSTALL_CMAKEDIR INCLUDE_INSTALL_DIR LIBRARY_INSTALL_DIR
     INSTALL_DESTINATION
         ${INSTALL_CMAKEDIR}
     NO_CHECK_REQUIRED_COMPONENTS_MACRO
