@@ -11,10 +11,6 @@ set(PROJECT_HOMEPAGE_URL "https://github.com/Aetf/libtsm")
 ## TODO: merge into project above after we require cmake 3.10
 set(PROJECT_DESCRIPTION "terminal-emulator state machine")
 
-if(APPLE)
-    add_compile_definitions(_DARWIN_C_SOURCE)
-endif()
-
 #---------------------------------------------------------------------------------------
 # Initial setups
 #---------------------------------------------------------------------------------------
