@@ -24,7 +24,7 @@ jobs:
             name: "macOS",
             os: macos-latest,
             deps: "brew install check",
-            config: "cmake -B ./build -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBUILD_TESTING=On -DBUILD_GTKTSM=Off"
+            config: "cmake -B ./build -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBUILD_SHARED_LIBS=Off -DBUILD_TESTING=On -DBUILD_GTKTSM=Off"
           }
 
     steps:
